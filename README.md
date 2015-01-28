@@ -5,10 +5,10 @@ txpool
 
 Summary
 -------
-A Python persistent process pool for use with [Twisted](http://twistedmatrix.com).
+A persistent process pool in Python for use with [Twisted](http://twistedmatrix.com).
 Provides the ability to run Python callables asynchronously within a pool of
-persistent processes, as long as the callable, its arguments, and its return
-value are all picklable.
+persistent processes, as long as the callables, their arguments, and their return
+values are all picklable.
 
 Installing
 ----------

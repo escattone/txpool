@@ -12,7 +12,7 @@ def read(relpath):
 setup(
     name='txpool',
     version='0.9',
-    description='A persistent process pool for Twisted',
+    description='A persistent process pool in Python for Twisted',
     long_description=read('README.rst'),
     license='MIT',
     author='Ryan Johnson',
@@ -21,6 +21,7 @@ setup(
     packages=['txpool'],
     install_requires=['twisted>=12'],
     classifiers=[
+        'Programming Language :: Python :: 2.6',
         'Programming Language :: Python :: 2.7',
         'Programming Language :: Python :: 2 :: Only',
         'Development Status :: 4 - Beta',
