@@ -3,14 +3,17 @@ import sys
 from setuptools import setup
 
 
+def read(relpath):
+    filename = os.path.join(os.path.dirname(__file__), relpath)
+    with open(filename) as f:
+        return f.read()
+
+
 setup(
     name='txpool',
     version='0.9',
     description='A persistent process pool for Twisted',
-    long_description=("A persistent process pool for Twisted that provides "
-                      "the ability to asynchronously run Python callables "
-                      "as long as the callable, its arguments, and its "
-                      "return value are all picklable."),
+    long_description=read('README.rst'),
     license='MIT',
     author='Ryan Johnson',
     author_email='escattone@gmail.com',
@@ -18,7 +21,8 @@ setup(
     packages=['txpool'],
     install_requires=['twisted>=12'],
     classifiers=[
-        'Programming Language :: Python',
+        'Programming Language :: Python :: 2.7',
+        'Programming Language :: Python :: 2 :: Only',
         'Development Status :: 4 - Beta',
         'Natural Language :: English',
         'Framework :: Twisted',

@@ -10,10 +10,6 @@ Python callables asynchronously within a pool of persistent processes,
 as long as the callable, its arguments, and its return value are all
 picklable.
 
-There is a decent set of unit tests for all of the code here. So far
-I've only tested it on Ubuntu with Python 2.7, but it's meant to run on
-Windows as well.
-
 Installing
 ----------
 
