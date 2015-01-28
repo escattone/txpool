@@ -1,6 +1,10 @@
 txpool
 ======
 
+.. figure:: https://travis-ci.org/escattone/txpool.svg?branch=master
+   :alt: Build Status
+
+   Build Status
 Summary
 -------
 

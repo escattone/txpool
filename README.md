@@ -1,6 +1,8 @@
 txpool
 ======
 
+![Build Status](https://travis-ci.org/escattone/txpool.svg?branch=master)
+
 Summary
 -------
 A Python persistent process pool for use with [Twisted](http://twistedmatrix.com).
