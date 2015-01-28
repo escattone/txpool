@@ -17,7 +17,7 @@ setup(
     license='MIT',
     author='Ryan Johnson',
     author_email='escattone@gmail.com',
-    url='http://github.com/escattone/txpool/',
+    url='https://github.com/escattone/txpool',
     packages=['txpool'],
     install_requires=['twisted>=12'],
     classifiers=[
