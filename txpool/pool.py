@@ -30,7 +30,6 @@ import cPickle as pickle
 from collections import deque
 from logging import INFO, ERROR
 from multiprocessing import cpu_count
-from twisted.internet.task import deferLater
 from twisted.protocols.basic import NetstringReceiver
 from twisted.internet.protocol import ProcessProtocol
 from twisted.internet.defer import succeed, fail, Deferred
@@ -125,7 +124,7 @@ class Pool(object):
                'os.path.exists', or a picklable callable.
 
         args, kwargs:  optional positional and/or keyword arguments for "call"
-        
+
         timeout: optional timeout which, if provided, specifies how long this
                  call can run before its deferred's errback is fired with a
                  PoolTimeout exception
@@ -275,7 +274,7 @@ class PoolManager(object):
 
         if self.is_ready():
             return succeed(self.pool)
-        
+
         msg = 'Pool %(name)s: not ready within %(timeout)s seconds.'
         d = make_deferred_with_timeout(timeout=timeout, timeout_msg=msg,
                                        name=self.name)
@@ -313,11 +312,11 @@ class PoolManager(object):
 
             def init_success(result):
                 self.log.info('Pool "%s": process %d initialized.',
-                               self.name, worker.pid)
+                              self.name, worker.pid)
 
             def init_failure(failure):
                 self.log.info('Pool "%s": process %d failed to initialize.',
-                               self.name, worker.pid)
+                              self.name, worker.pid)
 
             job.deferred.addCallbacks(init_success, init_failure)
         else:
@@ -579,4 +578,3 @@ def make_deferred_with_timeout(canceller=None, timeout=None, timeout_msg=None,
         d.addBoth(cancel_timeout)
 
     return d
-

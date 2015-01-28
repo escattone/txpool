@@ -1,3 +1,4 @@
+# flake8: noqa
 from txpool.pool import cpu_count, Pool, PoolError, PoolTimeout
 
 

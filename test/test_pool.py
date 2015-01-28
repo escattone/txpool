@@ -88,9 +88,9 @@ def test_pool_1():
 
 
 @pytest.inlineCallbacks
-def test_pool_2():
+def test_pool_2(tmpdir):
 
-    filename = 'test2.log'
+    filename = str(tmpdir.join('test2.log'))
 
     log = logging.getLogger('test2')
     log.addHandler(logging.FileHandler(filename, 'w'))
@@ -242,7 +242,7 @@ def test_pool_5():
     random.shuffle(args)
 
     for i, arg in enumerate(args):
-        d = pool.apply_async(math.factorial, (arg,), timeout=30)
+        d = pool.apply_async(math.factorial, (arg,), timeout=60)
         deferreds.append((arg, d))
         if i in (100, 200, 300, 400, 500):
             d.cancel()
