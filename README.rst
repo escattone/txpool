@@ -4,7 +4,7 @@ txpool
 Summary
 -------
 
-A persistent process pool for use with
+A Python persistent process pool for use with
 `Twisted <http://twistedmatrix.com>`__. Provides the ability to run
 Python callables asynchronously within a pool of persistent processes,
 as long as the callable, its arguments, and its return value are all
