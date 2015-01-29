@@ -58,7 +58,7 @@ specify the full path to the callable.
         # (the default is None).
         try:
             result = yield pool.apply_async('glob.glob', ('*.pdf',), timeout=5)
-        except PoolTimeout as e:
+        except txpool.PoolTimeout as e:
             result = e
         print result
         reactor.stop()
@@ -93,7 +93,7 @@ and/or given a custom name.
         # worker process is available.
         try:
             yield pool.on_ready(timeout=10)
-        except PoolTimeout as e:
+        except txpool.PoolTimeout as e:
             results = e
         else:
             results = yield gatherResults(map(pool.apply_async, calls, args))
@@ -104,7 +104,7 @@ and/or given a custom name.
             # You can gracefully close the pool, which ensures all jobs
             # already queued are completed before shutting down...
             yield pool.close(timeout=10)
-        except PoolTimeout as e:
+        except txpool.PoolTimeout as e:
             print e
             # ...or you can use force and immediately send SIGKILL to each
             # process in the pool.
