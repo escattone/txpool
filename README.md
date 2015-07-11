@@ -15,10 +15,6 @@ Installing
 ```sh
 pip install txpool
 ```
-or
-```sh
-python setup.py install
-```
 
 Examples
 --------
