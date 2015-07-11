@@ -5,6 +5,7 @@ txpool
    :alt: Build Status
 
    Build Status
+
 Summary
 -------
 
@@ -20,12 +21,6 @@ Installing
 .. code:: sh
 
     pip install txpool
-
-or
-
-.. code:: sh
-
-    python setup.py install
 
 Examples
 --------
@@ -123,4 +118,3 @@ actions, and/or given a custom name.
 
         reactor.callWhenRunning(main)
         reactor.run()
-
