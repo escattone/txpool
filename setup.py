@@ -20,7 +20,6 @@ setup(
     packages=['txpool'],
     install_requires=['twisted>=12'],
     classifiers=[
-        'Programming Language :: Python :: 2.6',
         'Programming Language :: Python :: 2.7',
         'Programming Language :: Python :: 2 :: Only',
         'Development Status :: 4 - Beta',
